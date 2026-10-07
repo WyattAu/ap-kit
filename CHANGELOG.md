@@ -5,6 +5,19 @@ Changelog](https://keepachangelog.com/) — versions follow [semver](https://sem
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-10-06
+
+### Added
+
+- Re-exports of `TaxCategory`, `DocumentType`, `DocumentReference`,
+  `RoundingPolicy`, `TieMode` and `is_all_or_none_reverse_charge`.
+
+  Found by the estate consumer suite, which is what it is for: a consumer
+  depending on both `invoice-kit` and `ap-kit` could not name a category
+  through either path as a single type, so the extraction was only half done. Two
+  structurally identical enums would have been a silent incompatibility rather
+  than a compile error.
+
 ## [0.1.0] - 2026-10-06
 
 Initial release: the accounts payable half of a tax ledger, mirroring

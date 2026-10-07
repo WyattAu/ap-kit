@@ -23,6 +23,15 @@ pub mod recoverability;
 
 pub use recoverability::{NonDeductibleReason, Recoverability};
 
+// Re-exported, not re-declared: a consumer that depends on both crates must see
+// one `TaxCategory` and one `DocumentType`, so a category chosen on a purchase
+// side can be handed to sales code and compared. Two structurally identical
+// enums would be a silent incompatibility.
+pub use vat_rules::{
+    DocumentReference, DocumentType, RoundingPolicy, TaxCategory, TieMode,
+    is_all_or_none_reverse_charge,
+};
+
 pub mod bill;
 
 pub use bill::{Bill, BillError, BillLine};

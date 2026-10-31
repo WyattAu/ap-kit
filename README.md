@@ -18,8 +18,8 @@ full tax whether or not the business can claim it back:
 - the **non-deductible** part, which is expense.
 
 Directive 2006/112/EC Article 168 is where the third outcome comes from: it lists
-circumstances in which the right to deduct does not arise at all — non-business
-use, entertainment, gifts, and unmet invoicing requirements — and allows a
+circumstances in which the right to deduct does not arise at all; non-business
+use, entertainment, gifts, and unmet invoicing requirements; and allows a
 proportion where goods are used for both business and non-business purposes.
 
 **Recoverability never changes the amount owed to the supplier.** A bill whose
@@ -32,7 +32,7 @@ rather than an accounting entry.
 
 Accounts receivable *issues* the document, so it derives each line net from
 quantity and unit price. Accounts payable *receives* it. The supplier's line net
-is data, not a derivation — recomputing `quantity × unit price` would mean
+is data, not a derivation; recomputing `quantity × unit price` would mean
 rounding a figure the supplier actually invoiced and then posting something that
 differs from the document in their hand. So `BillLine` carries the net amount as
 supplied, and quantity and unit price are retained for display and three-way
@@ -54,7 +54,7 @@ a test.
 ## Rounding
 
 Input tax is rounded under the same four regimes as the sales side, via
-`vat-rules::RoundingPolicy` — EN 16931 / Peppol per group, GST Act s9-90's
+`vat-rules::RoundingPolicy`; EN 16931 / Peppol per group, GST Act s9-90's
 total-invoice and taxable-supply methods, and HMRC Notice 700 §17.5. A rate above
 100% is refused, because the rate is per-mille and the transposition from `190` to
 `1900` is a 190% posting that no other check would catch.

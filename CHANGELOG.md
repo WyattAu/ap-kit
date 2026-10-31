@@ -1,7 +1,7 @@
 # Changelog
 
 All notable changes to this project are documented here. Format: [Keep a
-Changelog](https://keepachangelog.com/) — versions follow [semver](https://semver.org).
+Changelog](https://keepachangelog.com/); versions follow [semver](https://semver.org).
 
 ## [Unreleased]
 
@@ -48,7 +48,7 @@ Initial release: the accounts payable half of a tax ledger, mirroring
 
 ### Added
 
-- `Recoverability` — full, proportional, or none with the Article 168 limb
+- `Recoverability`; full, proportional, or none with the Article 168 limb
   recorded. Proportions truncate, because VAT Guidance Note 3 treats the
   unclaimable fraction as non-deductible cost, and rounding up over-claims input
   tax.
